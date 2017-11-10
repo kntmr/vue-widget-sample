@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .content {
   display: flex;
   border-bottom: 1px solid #ccc;
