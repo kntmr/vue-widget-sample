@@ -1,10 +1,14 @@
 import axios from 'axios'
 
+const debug = process.env.NODE_ENV !== 'production'
+
 const api = {
-  //get: (url) => axios.get(url)
   get: (url) => {
+    if (debug) {
+      return Promise.resolve({ data: mock })
+    }
     console.log('>> ' + url)
-    return Promise.resolve({ data: mock })
+    return axios.get(url)
   }
 }
 
