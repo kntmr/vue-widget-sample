@@ -1,6 +1,8 @@
 <template>
   <div class="content">
-    <img :src="item.user.profile_image_url" alt="profile_image_url" />
+    <div class="thumb">
+      <img :src="item.user.profile_image_url" alt="profile_image_url" />
+    </div>
     <div class="subject">
       <a :href="item.url">{{ item.title }}</a>
     </div>
@@ -18,14 +20,21 @@ export default {
 .content {
   display: flex;
   border-bottom: 1px solid #ccc;
-  padding: 8px 0;
+  padding: 8px 5px;
+  font-size: 14px;
 }
-img {
-  width: 64px;
-  height: 64px;
+.thumb {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
 .subject {
+  flex: 1 1 0%;
   word-break: break-all;
-  margin: 0 5px;
 }
 </style>
