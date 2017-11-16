@@ -67,6 +67,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     // keep module.id stable when vender modules does not change
     new webpack.HashedModuleIdsPlugin(),
+    /*
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
@@ -95,6 +96,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ])
+    */
   ]
 })
 
