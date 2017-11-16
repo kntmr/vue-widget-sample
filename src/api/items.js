@@ -13,7 +13,7 @@ const api = {
 }
 
 export default {
-  getItems: () => api.get('https://qiita.com/api/v2/items?query=tag:vue.js').then(resp => {
+  getItems: (query) => api.get(`https://qiita.com/api/v2/items?query=${query}`).then(resp => {
     return Promise.resolve(resp.data)
   })
 }

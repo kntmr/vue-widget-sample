@@ -11,10 +11,11 @@ export default {
   name: 'items',
   components: { Item },
   computed: mapGetters({
-    items: 'items'
+    items: 'items',
+    query: 'query'
   }),
   created () {
-    this.$store.dispatch('getItems')
+    this.$store.dispatch('getItems', this.query)
   }
 }
 </script>

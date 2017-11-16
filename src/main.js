@@ -14,5 +14,10 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  render: function (createElement) {
+    const dataset = this.$el.dataset
+    this.$store.dispatch('setQuery', dataset.tag)
+    return createElement('App')
+  }
 })
