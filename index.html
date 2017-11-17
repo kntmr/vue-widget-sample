@@ -4,6 +4,29 @@
     <meta charset="utf-8">
     <title>vue-widget-sample</title>
     <style type="text/css">
+    .header, .footer {
+      width: 100%;
+      height: 64px;
+      margin: 10px 0;
+      border: solid 1px #ccc;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    section {
+      display: flex;
+    }
+    .main {
+      width: 100%;
+      height: 480px;
+      margin-right: 20px;
+      border: solid 1px #ccc;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .my-widget {
       width: 360px;
       height: 400px;
@@ -11,7 +34,18 @@
     </style>
   </head>
   <body>
-    <div id="app" data-tag="vue.js"></div>
-    <!-- built files will be auto injected -->
+    <div class="header">
+      ヘッダー
+    </div>
+    <section>
+      <div class="main">
+        コンテンツ
+      </div>
+      <div id="app" data-tag="vue.js"></div>
+      <!-- built files will be auto injected -->
+    </section>
+    <footer class="footer">
+      フッター
+    </footer>
   </body>
 </html>
